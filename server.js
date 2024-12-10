@@ -6,6 +6,8 @@ app.use(express.json()); // Middleware pour le JSON
 // Définir un port
 const PORT = process.env.PORT || 3000;
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 // /hello/txt
 app.get('/hello/txt', (req, res) => {
     res.send('Hello, World in plain text!');
